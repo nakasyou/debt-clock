@@ -10,7 +10,11 @@ import { defineComponent } from 'vue'
 import config from "../debt-clock.json" assert { type: "json" }
 
 export default defineComponent({
-  
+  data() {
+    return {
+      config,
+    }
+  },
 })
 </script>
 
