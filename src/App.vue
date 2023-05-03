@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>借金時計</h1>
-    {{ config.debt.start }}
+    {{ changeFromMs }}
   </div>
 </template>
 
@@ -9,10 +9,19 @@
 import { defineComponent } from 'vue'
 import config from "../debt-clock.json" assert { type: "json" }
 
+const { debt } = config;
+
 export default defineComponent({
   data() {
     return {
-      config,
+      debt: {
+        time: Date.parse(debt.start),
+        changeFromMs: debt.debtFromDay / debt.day // 毎日
+          / 24 //毎時
+          / 60 //毎分
+          / 60 //毎秒
+          / 1000 //毎ミリ秒
+      },
     }
   },
 })
