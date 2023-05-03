@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>借金時計</h1>
-    {{ changeFromMs }}
+    {{ debt.changeFromMs }}
   </div>
 </template>
 
