@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import config from "../debt-clock.json" assert { type: "json" }
+import config from "../debt-clock.ts"
 
 const { debt } = config;
 
@@ -23,6 +23,9 @@ export default defineComponent({
           / 1000 //毎ミリ秒
       },
     }
+  },
+  methods: {
+  
   },
 })
 </script>
