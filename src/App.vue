@@ -1,7 +1,7 @@
 <template>
-  <main>
+  <div>
     <h1>借金時計</h1>
-  </main>
+  </div>
 </template>
 
 <script lang="ts">
