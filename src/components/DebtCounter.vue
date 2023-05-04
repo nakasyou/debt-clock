@@ -2,9 +2,24 @@
 const props = defineProps<{
   debts: number
 }>()
+
+const debtsPre = (debts: number): number[] => {
+  let result = "";
+  let i=0;
+  for(const char of Array.from(String(debts)).reverse()){
+    result = char + result;
+    if(i % 4 === 3){
+      result = "," + result;
+    }
+    i++;
+  }
+  if(result[0] === ",")
+    result = result.slice(1);
+  return result.split(",")
+}
 </script>
 <template>
-<div>
-{{ debts }}
-</div>
+  <div>
+    {{ debtsPre(debts).join(" ") }}
+  </div>
 </template>
