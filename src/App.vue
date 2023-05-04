@@ -21,7 +21,8 @@ export default defineComponent({
           / 24 //毎時
           / 60 //毎分
           / 60 //毎秒
-          / 1000 //毎ミリ秒
+          / 1000, //毎ミリ秒
+        debt: debt.debt,
       },
       debtNum: 0,
     }
@@ -29,7 +30,7 @@ export default defineComponent({
   methods: {
     update(){
       const date = new Date()
-      const debt = (date.getTime() - this.debt.time) * this.debt.changeFromMs
+      const debt = (date.getTime() - this.debt.time) * this.debt.changeFromMs + this.debt.debt
       this.debtNum = debt
     }
   },
