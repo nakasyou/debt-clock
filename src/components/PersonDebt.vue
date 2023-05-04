@@ -4,9 +4,8 @@ const props = defineProps<{
   population: {population: number, view: string}
 }>()
 
-const debtsPre = (debts: number): number[] => {
+const debtsPre = (debts: number, population): number[] => {
   debts /= population.population;
-  alert(debts,population.population)
   let result = "";
   let i=0;
   for(const char of Array.from(String(Math.floor(debts))).reverse()){
@@ -23,7 +22,7 @@ const debtsPre = (debts: number): number[] => {
 </script>
 <template>
   <div class="units">
-    <div v-for="(unit, index) in debtsPre(debts)" :key="index">
+    <div v-for="(unit, index) in debtsPre(debts,population)" :key="index">
       <span class="num">{{ unit }}</span>
       <span class="unit">{{ "兆億万円"[index] }}</span>
     </div>
