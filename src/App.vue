@@ -2,7 +2,7 @@
   <div>
     <div class="text-center text-4xl">Debt clock</div>
     <div class="text-right text-slate-400 pr-1">- 借金時計</div>
-    <div class="text-center">At 🇯🇵Japan</div>
+    <div class="text-center">{{ location }}</div>
     
     <DebtCounter :debts="debtNum" />
     <div>
@@ -18,7 +18,7 @@ import config from "../debt-clock.ts"
 import DebtCounter from "./components/DebtCounter.vue"
 import PersonDebt from "./components/PersonDebt.vue"
 
-const { debt, population } = config;
+const { debt, population, location } = config;
 
 export default defineComponent({
   components: {
@@ -38,6 +38,7 @@ export default defineComponent({
       },
       debtNum: 0,
       population,
+      location,
     }
   },
   methods: {
