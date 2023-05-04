@@ -11,7 +11,7 @@
     </div>
     <div>
       <ul>
-        <li>Souce Code: <a href="https://github.com/nakasyou/debt-clock">https://github.com/nakasyou/debt-clock</a></li>
+        <li>Souce Code: <a class="text-blue-500" href="https://github.com/nakasyou/debt-clock">https://github.com/nakasyou/debt-clock</a></li>
       </ul>
     </div>
   </div>
