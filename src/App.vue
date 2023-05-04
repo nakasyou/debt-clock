@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>借金時計</h1>
-    {{ debt.changeFromMs }}
+    <DebtCounter debts=0/>
     {{ debtNum }}
   </div>
 </template>
@@ -9,10 +9,14 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import config from "../debt-clock.ts"
+import DebtCounter from "./components/DebtCounter.vue"
 
 const { debt } = config;
 
 export default defineComponent({
+  components: {
+    DebtCounter,
+  },
   data() {
     return {
       debt: {
