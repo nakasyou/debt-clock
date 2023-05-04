@@ -5,6 +5,7 @@
     <div class="text-center">At 🇯🇵Japan</div>
     
     <DebtCounter :debts="debtNum" />
+    <PersonDebt :debts="debtNum" :population="population">
   </div>
 </template>
 
@@ -12,12 +13,14 @@
 import { defineComponent } from 'vue'
 import config from "../debt-clock.ts"
 import DebtCounter from "./components/DebtCounter.vue"
+import PersonDebt from "./components/PersonDebt.vue"
 
 const { debt, population } = config;
 
 export default defineComponent({
   components: {
     DebtCounter,
+    PersonDebt,
   },
   data() {
     return {
