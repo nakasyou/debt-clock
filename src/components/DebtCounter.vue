@@ -6,7 +6,7 @@ const props = defineProps<{
 const debtsPre = (debts: number): number[] => {
   let result = "";
   let i=0;
-  for(const char of Array.from(String(debts)).reverse()){
+  for(const char of Array.from(String(Math.floor(debts))).reverse()){
     result = char + result;
     if(i % 4 === 3){
       result = "," + result;
