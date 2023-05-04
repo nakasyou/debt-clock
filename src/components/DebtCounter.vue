@@ -27,11 +27,14 @@ const debtsPre = (debts: number): number[] => {
   </div>
 </template>
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
 .unit{
   font-size: 2em;
 }
 .num{
   font-size: 4em;
+  font-family: 'Roboto Mono', monospace;
 }
 .units{
   display: flex;
