@@ -9,6 +9,11 @@
       <div class="text-xl">一人当たり({{ population.view }})</div>
       <PersonDebt :debts="debtNum" :population="population" />
     </div>
+    <div>
+      <ul>
+        <li>Souce Code: <a href="https://github.com/nakasyou/debt-clock">https://github.com/nakasyou/debt-clock</a></li>
+      </ul>
+    </div>
   </div>
 </template>
 
