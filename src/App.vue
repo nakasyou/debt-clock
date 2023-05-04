@@ -1,6 +1,9 @@
 <template>
   <div>
-    <h1>借金時計</h1>
+    <div class="text-center text-4xl">Debt clock</div>
+    <div class="text-right text-slate-400">- 借金時計</div>
+    <div class="text-center">At 🇯🇵Japan</div>
+    
     <DebtCounter :debts="debtNum" />
   </div>
 </template>
