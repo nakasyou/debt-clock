@@ -20,6 +20,8 @@ const debtsPre = (debts: number): number[] => {
 </script>
 <template>
   <div>
-    {{ debtsPre(debts).join(" ") }}
+    <span v-for="(unit, index) in debtsPre(debts)" :key="index">
+      <span>{{ unit }}</span>
+    </span>
   </div>
 </template>
