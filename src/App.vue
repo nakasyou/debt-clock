@@ -5,8 +5,8 @@
     <div class="text-center">At 🇯🇵Japan</div>
     
     <DebtCounter :debts="debtNum" />
-    <div class="flex">
-      <div>一人当たり({{ population.view }})</div>
+    <div>
+      <div class="text-xl">一人当たり({{ population.view }})</div>
       <PersonDebt :debts="debtNum" :population="population" />
     </div>
   </div>
