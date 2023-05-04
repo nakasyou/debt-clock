@@ -26,3 +26,8 @@ const debtsPre = (debts: number): number[] => {
     </span>
   </div>
 </template>
+<style scoped>
+.unit{
+  font-size: 2em;
+}
+</style>
