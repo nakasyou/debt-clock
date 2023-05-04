@@ -5,7 +5,7 @@
     <div class="text-center">At 🇯🇵Japan</div>
     
     <DebtCounter :debts="debtNum" />
-    <PersonDebt :debts="debtNum" :population="population">
+    <PersonDebt :debts="debtNum" :population="population" />
   </div>
 </template>
 
