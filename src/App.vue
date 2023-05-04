@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>借金時計</h1>
-    <DebtCounter debts="0" />
+    <DebtCounter :debts="debtNum" />
     {{ debtNum }}
   </div>
 </template>
