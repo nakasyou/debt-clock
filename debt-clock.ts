@@ -8,5 +8,6 @@ export default {
   population: {
     population: 1249407000,
     view: "1億2494万7000人(2022)",
-  }
+  },
+  location: "At 🇯🇵Japan",
 }
