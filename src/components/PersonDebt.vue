@@ -5,7 +5,7 @@ const props = defineProps<{
 }>()
 
 const debtsPre = (debts: number): number[] => {
-  //debts /= population;
+  debts /= population.population;
   let result = "";
   let i=0;
   for(const char of Array.from(String(Math.floor(debts))).reverse()){
