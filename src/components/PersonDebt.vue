@@ -1,9 +1,11 @@
 <script setup lang="ts">
 const props = defineProps<{
   debts: number
+  population: {population: number, view: string}
 }>()
 
 const debtsPre = (debts: number): number[] => {
+  debts /= population;
   let result = "";
   let i=0;
   for(const char of Array.from(String(Math.floor(debts))).reverse()){
