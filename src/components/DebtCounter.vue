@@ -22,6 +22,7 @@ const debtsPre = (debts: number): number[] => {
   <div>
     <span v-for="(unit, index) in debtsPre(debts)" :key="index">
       <span>{{ unit }}</span>
+      <span class="unit">{{ "兆億万円"[index] }}</span>
     </span>
   </div>
 </template>
