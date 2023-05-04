@@ -2,6 +2,7 @@
   <div>
     <h1>借金時計</h1>
     {{ debt.changeFromMs }}
+    {{ debtNum }}
   </div>
 </template>
 
@@ -22,10 +23,18 @@ export default defineComponent({
           / 60 //毎秒
           / 1000 //毎ミリ秒
       },
+      debtNum: 0,
     }
   },
   methods: {
-  
+    update(){
+      const date = new Date()
+      const debt = (date.getTime() - this.debt.time) * this.debt.changeFromMs
+      this.debtNum = debt
+    }
+  },
+  mounted(){
+    setInterval(this.update)
   },
 })
 </script>
