@@ -6,7 +6,7 @@
     
     <DebtCounter :debts="debtNum" />
     <div>
-      <div class="text-xl">一人当たり({{ population.view }})</div>
+      <div class="text-xl">一人当たり({{ population.view }}):</div>
       <PersonDebt :debts="debtNum" :population="population" />
     </div>
     <div>
