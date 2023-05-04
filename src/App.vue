@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="text-center text-4xl">Debt clock</div>
-    <div class="text-right text-slate-400">- 借金時計</div>
+    <div class="text-right text-slate-400 pr-1">- 借金時計</div>
     <div class="text-center">At 🇯🇵Japan</div>
     
     <DebtCounter :debts="debtNum" />
@@ -13,7 +13,7 @@ import { defineComponent } from 'vue'
 import config from "../debt-clock.ts"
 import DebtCounter from "./components/DebtCounter.vue"
 
-const { debt } = config;
+const { debt, population } = config;
 
 export default defineComponent({
   components: {
@@ -31,6 +31,7 @@ export default defineComponent({
         debt: debt.debt,
       },
       debtNum: 0,
+      population,
     }
   },
   methods: {
